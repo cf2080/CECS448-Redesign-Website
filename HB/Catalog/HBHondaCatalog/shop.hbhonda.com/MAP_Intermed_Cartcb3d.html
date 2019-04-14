@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<!-- Mirrored from shop.hbhonda.com/MAP_Intermed_Cart.asp?RetailPrice= by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Apr 2019 08:18:51 GMT -->
+<head>
+<script src="http://www.psndealer.com/jquery.tools.min.js"></script> 
+<style>
+.UnBreakStuff
+{
+ text-align:left;
+ padding:0px 0px 0px 0px; 
+ margin:5px 0px 0px 10px;
+ border:0px 0px 0px 0px;
+}
+.IEisWeird
+{
+ text-align:left;
+ padding:0px 0px 0px 0px; 
+ margin:0px 0px 0px 0px;
+ border:0px 0px 0px 0px;
+}
+#divAlertPopUp {
+	display:none;
+	width:450px;
+	height:150px;
+	background-image:url(http://cdn-psndealer.dx1app.com/dealersite/images/popUpRAQ.jpg);	
+}
+#divAlertPopUp div {
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 10px 0px;
+}
+#divAlertPopUp .close {
+	background-image:url(http://cdn-psndealer.dx1app.com/dealersite/images/closeRAQOverlay.png);
+	position:absolute; right:12px; top:10px;
+	cursor:pointer;
+	height:13px;
+	width:13px;
+}
+</style>
+
+</head>
+<body id="MAPCartBody" onload="doAlt()">
+<div style="height:10px;font-size:10px;">&nbsp;</div><div class="IEisWeird">&nbsp;<FONT style="font-style:arial; font-size:11px" COLOR="#f3f3f3"><strong><u>&nbsp; </u></strong></FONT></div><br>
+
+<script type="text/javascript">
+
+    window.onunload = function () {
+
+        closeOverlaysOrPopup();  //Deliberately intercept Window (parent X close stuff), so we can set focus, so Qty can be entered easily in calling page.
+        return true;
+    }
+
+    var altPopUp = 'no';
+    var isFicheDetailMode = 'no';
+
+	var popLeft = screen.width/2 - 300;
+	var popTop = screen.height/2 - 250;
+
+function doAlt(){
+	if(altPopUp=='yes')
+	{
+		document.body.style.backgroundImage = 'url(//cdn-psndealer.dx1app.com/dealersite/images/transparentRAQOverlay.png)';
+	}
+}
+
+//NOTE: This code module was based upon the code module of request_quick_quote.asp.
+function ValidateForm(){
+	
+    var errorMsg = "";
+
+	if ( (document.getElementById("MAPQuantity").value == "") || (document.getElementById("MAPQuantity").value == "0") )
+	{
+		errorMsg += "A quantity must be entered in order to Add to Cart.\n";
+	}
+		
+	if(errorMsg.length > 0)
+	{
+		alert(errorMsg);
+	}
+    else //Accept the user's entered QTY, and Add to the Cart.
+    {
+        AddToCartAndStayHere();
+	}
+}
+
+function AddToCartAndStayHere() {
+
+    var myQueryStringPost;
+
+    var FilteredPrice = document.getElementById("YourPrice").value;
+
+    FilteredPrice = FilteredPrice.replace("C$", "")
+    FilteredPrice = FilteredPrice.replace("$", "")
+
+    myQueryStringPost =
+    'AddToBasketFromMAPCart=1&submit=AddToBasketFromMAPCart'
+    + '&sid=' + ((document.getElementById("sid").value==="https://shop.hbhonda.com/")?"":document.getElementById("sid").value)
+    + '&dc=' + ((document.getElementById("dc").value==="https://shop.hbhonda.com/")?"":document.getElementById("dc").value)
+    + '&year=' + ((document.getElementById("year").value==="https://shop.hbhonda.com/")?"":document.getElementById("year").value)
+    + '&make=' + ((document.getElementById("make").value==="https://shop.hbhonda.com/")?"":document.getElementById("make").value)
+    + '&model=' + ((document.getElementById("model").value==="https://shop.hbhonda.com/")?"":document.getElementById("model").value)
+    + '&fveh=' + ((document.getElementById("fveh").value==="https://shop.hbhonda.com/")?"":document.getElementById("fveh").value)
+    + '&section=' + ((document.getElementById("section").value==="https://shop.hbhonda.com/")?"":document.getElementById("section").value)
+    + '&category=' + ((document.getElementById("category").value==="https://shop.hbhonda.com/")?"":document.getElementById("category").value)
+
+    + '&MAPFichePartCode=' + document.getElementById("FichePartCode").value
+    + '&MAPFichePartNum=' + document.getElementById("FichePartNumber").value
+    + '&MAPFichePartName=' + document.getElementById("FichePartName").value.replace("&", "%26")
+
+    + '&MAPFichePrice=' + FilteredPrice
+    + '&MAPFicheQty=' + document.getElementById("MAPQuantity").value;
+	
+    $.post("https://shop.hbhonda.com/fiche_add_to_basket.asp?" + myQueryStringPost, $("#MAPCartForm").serialize(),
+	function () {
+	    alert("Item(s) added to cart");
+	});
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function CloseFormAndProceedToCart() {
+
+    var myQSGoodSetupContinueShopFromCart;
+
+    window.onunload = null;
+
+    myQSGoodSetupContinueShopFromCart =
+     'sid=' + document.getElementById("sid").value
+    + '&dc=' + document.getElementById("dc").value
+    + '&year=' + document.getElementById("year").value
+    + '&make=' + document.getElementById("make").value
+    + '&model=' + document.getElementById("model").value
+    + '&fveh=' + document.getElementById("fveh").value
+    + '&section=' + document.getElementById("section").value
+    + '&category=' + document.getElementById("category").value;
+
+    if (altPopUp == 'yes') {
+
+        window.opener.location = 'https://shop.hbhonda.com/ecbasket.asp?' + myQSGoodSetupContinueShopFromCart; //This is essential ... popup window goes away, tell calling page to redirect to basket.         
+        self.close();  //Close this popup window.               
+    }
+    else
+    {
+        scopeThis.getOverlay().find('.close').trigger('click');
+
+        //Add the single fiche part and transition to the basket...                        
+        window.location.href = 'https://shop.hbhonda.com/ecbasket.asp?' + myQSGoodSetupContinueShopFromCart;
+    }
+}
+
+//Either self close (if a popup window) or use calling page's closeOverlay() method (in fiche_section_detail.asp).
+function closeOverlaysOrPopup() {
+
+    var myQSGoodSetupContinueShopFromCart;
+
+    if (altPopUp == 'yes') {
+
+        myQSGoodSetupContinueShopFromCart =
+            'sid=' + document.getElementById("sid").value
+            + '&dc=' + document.getElementById("dc").value
+            + '&year=' + document.getElementById("year").value
+            + '&make=' + document.getElementById("make").value
+            + '&model=' + document.getElementById("model").value
+            + '&fveh=' + document.getElementById("fveh").value
+            + '&section=' + document.getElementById("section").value
+            + '&category=' + document.getElementById("category").value;
+
+        if (isFicheDetailMode == 'yes') {
+            window.opener.location = 'https://shop.hbhonda.com/fiche_section_detail.asp?' + myQSGoodSetupContinueShopFromCart;
+        }
+        else {
+            window.opener.location = 'https://shop.hbhonda.com/fiche_select.asp?mfg=' + document.getElementById("make").value + '&partnumber=' + document.getElementById("FichePartNumber").value
+        }
+
+        //Needed to set this for the parent explicitly (thus a refresh) to allow us to popup the same fiche item after
+        //Continue shopping within this popup (i.e., self close isn't entirely closing?).
+        self.close();
+    }
+    else {
+        closeOverlay(); //Calls the parent (fiche_section_detail.asp) method.
+    }    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if(IEVersion().BrowserMode == "Compat Mode")
+{
+	document.getElementById("MAPCartBody").className += " UnBreakStuff";
+}
+
+/*
+ * Author: Rob Reid
+ * CreateDate: 20-Mar-09
+ * Description: Little helper function to return details about IE 8 and its various compatibility settings either use as it is
+ * or incorporate into a browser object. Remember browser sniffing is not the best way to detect user-settings as spoofing is
+ * very common so use with caution.
+*/
+function IEVersion(){
+	var _n=navigator,_w=window,_d=document;
+	var version="NA";
+	var na=_n.userAgent;
+	var ieDocMode="NA";
+	var ie8BrowserMode="NA";
+	// Look for msie and make sure its not opera in disguise
+	if(/msie/i.test(na) && (!_w.opera)){
+		// also check for spoofers by checking known IE objects
+		if(_w.attachEvent && _w.ActiveXObject){		
+			// Get version displayed in UA although if its IE 8 running in 7 or compat mode it will appear as 7
+			version = (na.match( /.+ie\s([\d.]+)/i ) || [])[1];
+			// Its IE 8 pretending to be IE 7 or in compat mode		
+			if(parseInt(version)==7){				
+				// documentMode is only supported in IE 8 so we know if its here its really IE 8
+				if(_d.documentMode){
+					version = 8; //reset? change if you need to
+					// IE in Compat mode will mention Trident in the useragent
+					if(/trident\/\d/i.test(na)){
+						ie8BrowserMode = "Compat Mode";
+					// if it doesn't then its running in IE 7 mode
+					}else{
+						ie8BrowserMode = "IE 7 Mode";
+					}
+				}
+			}else if(parseInt(version)==8){
+				// IE 8 will always have documentMode available
+				if(_d.documentMode){ ie8BrowserMode = "IE 8 Mode";}
+			}
+			// If we are in IE 8 (any mode) or previous versions of IE we check for the documentMode or compatMode for pre 8 versions			
+			ieDocMode = (_d.documentMode) ? _d.documentMode : (_d.compatMode && _d.compatMode=="CSS1Compat") ? 7 : 5;//default to quirks mode IE5				   			
+		}
+	}
+				 
+	return {
+		"UserAgent" : na,
+		"Version" : version,
+		"BrowserMode" : ie8BrowserMode,
+		"DocMode": ieDocMode
+	}			
+}
+
+</script>
+<FORM id="MAPCartForm" onsubmit="return false;">
+<input type="hidden" id="RAQ" name="RAQ" value="yes" />
+<input type="hidden" id="RetailPrice" name="RetailPrice" value= />
+<input type="hidden" id="YourPrice" name="YourPrice" value= />
+<input type="hidden" id="FichePartName" name="FichePartName" value= />
+<input type="hidden" id="FichePartNumber" name="FichePartNumber" value= />
+<input type="hidden" id="DisclaimerText" name="DisclaimerText" value= />
+<input type="hidden" id="FichePartCode" name="FichePartCode" value= />
+<input type="hidden" id="sid" name="sid" value=09003826X4K13K2019J2I45I36JAMQ8913R0 />
+<input type="hidden" id="dc" name="dc" value= />
+<input type="hidden" id="year" name="year" value= />
+<input type="hidden" id="make" name="make" value= />
+<input type="hidden" id="model" name="model" value= />
+<input type="hidden" id="fveh" name="fveh" value= />
+<input type="hidden" id="section" name="section" value= />
+<input type="hidden" id="category" name="category" value= />
+
+
+<table width="432px">
+	<tr>		
+
+        
+        <td class="IEisWeird"><br /></td>
+        
+        
+        <td class="IEisWeird">
+
+            
+
+                <FONT SIZE="2" align="left" face="Arial" COLOR="Black">&nbsp;</font><Font SIZE="2" color="black">
+                <nobr>&nbsp;Quantity:&nbsp;
+                </font>
+            
+                <input style="font-family: Arial"; type="text" id = "MAPQuantity" name="MAPQuantity" size="2" value="">
+
+            
+        </td>
+        
+         <td class="IEisWeird" align="left">            		
+			 <div style="cursor:pointer">
+
+                
+				<div onclick="ValidateForm()" id="myaddtocart"><img src="https://shop.hbhonda.com/images/simple-add-to-cart.gif" border="0" width="100px"></div>
+                
+
+			 </div>                   
+		</td>         	
+	</tr>
+		
+	<tr>            
+
+        <td class="IEisWeird"><FONT SIZE="2" align="left" face="Arial" COLOR="Black">&nbsp;</font><Font SIZE="2" color="red"><nobr>Your Price:&nbsp;</font></td>
+
+        <td class="IEisWeird" align="right">               			
+			<div style="background-color:#606060; border:#606060 1px solid; width:120px; text-decoration:none; margin-top:5px; cursor:pointer">
+				<div onclick="closeOverlaysOrPopup()" id="Div1" style="border:#FFF 1px solid; padding:2px 0 2px 0; vertical-align:middle; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#FFF;">
+					<nobr>Continue Shopping
+				</div>               
+			</div>
+        </td>
+
+        <td class="IEisWeird" align="right">  
+             
+                              		
+			    <div style="background-color:#606060; border:#606060 1px solid; width:120px; text-decoration:none; margin-top:5px; cursor:pointer">
+				    <div onclick="window.onunload = null; CloseFormAndProceedToCart()" id="sub" style="border:#FFF 1px solid; padding:2px 0 2px 0; vertical-align:middle; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#FFF;">
+					    <nobr>Proceed to Cart
+				    </div>
+			    </div> 
+            
+
+		</td>         
+    </tr>
+</table>
+
+<table>    
+    <tr>                    
+        <td class="IEisWeird" align="left" valign="top">
+        <br />  
+        <div style="width:430px; text-decoration:none; vertical-align:middle; text-align:left;">        
+        <div id="Div2" style="vertical-align:middle; text-align:left; font-family:Arial, Helvetica, sans-serif; font-size:8px; color:#FFF;">
+        <FONT SIZE="2" align="center" COLOR="#606060"></FONT>
+        </div>
+        </div>
+        <br /> 
+        <br />     
+        </td>
+    </tr>	   
+</table>
+</FORM>
+
+<div class="divAlertPopUp" id="divAlertPopUp"
+	<a class="close" style="opacity:1;" onmouseup="closeOverlaysOrPopup();"></a>
+	<table width="100%" height="150px">
+		<tbody>
+			
+						
+			<tr><td><br /></td><td></td></tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td align="right">
+					<div align="right" style="background-color:#606060; border:#606060 1px solid; width:85px; text-decoration:none; margin-top:5px; cursor:pointer; height:22px;">
+						<div onmouseup="closeOverlaysOrPopup()" align="right" style="border:#FFF 1px solid; padding:2px 0 2px 0; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#FFF; height:16px;">
+							CONTINUE
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+
+<!-- Mirrored from shop.hbhonda.com/MAP_Intermed_Cart.asp?RetailPrice= by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Apr 2019 08:18:51 GMT -->
+</html>
