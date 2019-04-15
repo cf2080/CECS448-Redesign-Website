@@ -1,0 +1,12 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	IsMobileDevice	N
+hbhonda.com	TRUE	/	FALSE	1999999999	ARRAffinity	7b3ceb631a31fa41a801553db5146f03875678f286a4446e6326d46405442706
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	sid	02594873X4K13K2019J2I48I31JAMQ8913R0
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	pr	0
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	8913%5FSortBy	price
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	product	8289381
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	cat	5820179%2D79648%2D31789
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	RecentlyViewedProds	8289381%7C8300948%7C8287721%7C
+shop.hbhonda.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDCEBTRSBC	LNJEHFIAKJNMJLLNMFICFNGG
+

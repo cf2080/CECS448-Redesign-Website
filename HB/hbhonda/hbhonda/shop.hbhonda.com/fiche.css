@@ -1,0 +1,295 @@
+.content {white-space:nowrap; list-style:none; text-indent:0; font-size:14px;width:165px; display:none;}
+.text {white-space:normal; width:187px; padding-left:20px}
+.content_2 {white-space:nowrap; list-style:none; text-indent:0; font-size:14px;width:505px; display:none;}
+.indicator {text-align:left;}
+.indicator img { vertical-align: text-bottom; }
+.tabLink {text-decoration:none; color:#fff;}
+.listControls {text-align:right; position:static; margin-right:5px;}
+.instructions {text-align:left; font-size:14px; width:100%; margin-left:20px; font-size:12px; margin-top:-10px;}
+.button {  height:21px; padding:0; font-size:8px; text-align:center;}
+.jsButton {font-size:9px; text-transform:capitalize; text-decoration:none; color: #000; position:inherit;}
+#fiche-breadcrumb,
+.breadcrumb {
+    color: #000;
+    font-family: Arial;
+    font-size: 8pt;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+#fiche-breadcrumb a,
+#fiche-breadcrumb a:visited,
+.breadcrumb a {
+    color: #000;
+    font-family: Arial;
+    font-size: 8pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+A.tabsBreadCrumbText:link { color: #000; font-family: Arial; font-size: 8pt; font-weight:bold; text-decoration:none;}
+A.tabsBreadCrumbText:active { color: #000; font-family: Arial; font-size: 8pt; font-weight:bold; text-decoration:none;}
+A.tabsBreadCrumbText:visited { color: #000; font-family: Arial; font-size: 8pt; font-weight:bold; text-decoration:none;}
+A.tabsBreadCrumbText { color: #000; font-family: Arial; font-size: 8pt; font-weight:bold; text-decoration:none;}
+.tabsBreadCrumbText:hover { color: #000; font-family: Arial; font-size: 8pt; font-weight:bold; text-decoration:underline;}
+A.NV_mod_header_selected_text:hover { color: gray; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_selected_text:link { color: #fff; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_selected_text:active { color: #fff; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_selected_text:visited { color: #fff; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+.NV_mod_header_selected_text { color: #000;vertical-align:bottom; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 10pt;}
+.NV_mod_header_text { color: #fff; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_text:hover { color: gray; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_text:link { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+A.NV_mod_header_text:visited { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle; }
+A.NV_mod_header_text:active { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; font-weight: bold; line-height: 12pt; vertical-align:middle;}
+FONT.NV_mod_detail_text { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; }
+FONT.NV_mod_nav_text { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none;}
+FONT.cat_detail_text { color: #34332F; font-family: arial; font-size: 8pt; text-decoration: none; font-weight: bold; }
+A.NV_mod_nav_text:hover { color: #ccc; font-family: Arial; font-size: 8pt; text-decoration: none; }
+.NV_mod_nav_text { color: #fff; white-space:nowrap; font-family: Arial; font-size: 8pt; text-decoration: none; }
+.NV_mod_detail_link_text { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:0; font-weight:bold;}
+A.NV_mod_detail_link_text:hover { color: gray; font-family: Arial; font-size: 8pt; text-decoration: none; }
+A.NV_mod_detail_link_text:link { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:0; font-weight:bold;}
+A.NV_mod_detail_link_text:active { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:0; font-weight:bold;}
+A.NV_mod_detail_link_text:visited { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:0; font-weight:bold;}
+.NV_mod_detail_headers_text { color: #000; font-family: Arial; font-size: 10pt; text-decoration: none; margin-left:0; font-weight:bold;}
+.NV_mod_detail_breadCrumbs_text { color: #000; font-family: Arial; font-size: 14pt; text-decoration: none; margin-left:0; font-weight:bold;}
+.NV_mod_detail_link_text_1 { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:20px; font-weight:bold;}
+.NV_mod_detail_link_text_1:link { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:20px; font-weight:bold;}
+.NV_mod_detail_link_text_1:active { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:20px; font-weight:bold;}
+.NV_mod_detail_link_text_1:visited { color: #000; font-family: Arial; font-size: 8pt; text-decoration: none; margin-left:20px; font-weight:bold;}
+A.NV_buttons_text:hover { color: #ccc; font-family: Arial; font-size: 8pt; text-decoration: none; }
+.NV_buttons_text { color: #fff; font-family: Arial; font-size: 8pt; text-decoration: none; }
+.NV_mod_header2_text { color: #000; font-family: Arial; font-size: 11pt; text-decoration: none; font-weight: bold; line-height: 14pt;}
+.NV_mod_header2_text:link { color: #000; font-family: Arial; font-size: 11pt; text-decoration: none; font-weight: bold; line-height: 14pt;}
+.NV_mod_header2_text:active { color: #000; font-family: Arial; font-size: 11pt; text-decoration: none; font-weight: bold; line-height: 14pt;}
+.NV_mod_header2_text:visited { color: #000; font-family: Arial; font-size: 11pt; text-decoration: none; font-weight: bold; line-height: 14pt;}
+#main   {width:590px; vertical-align:top; background-color:white;}
+.description {color: #34332F; font-family: arial; font-size: 8pt; text-decoration: none; font-weight: bold;}
+.header_text {font-family: arial; font-size: 9pt; color: #000; font-weight:bold;}
+.toolbarSelect {font-size:8pt; font-family:Arial; }
+
+.li 
+    {color: #000; font:8pt/10pt Arial, sans-serif;}
+.redtext
+    {color:red;}
+table.PartsListTopBottom 
+    {background: url(http://images.psndealer.com/dealersite/images/fiche_sub_title.gif);
+    width:100%;
+    border:0;}
+#EComContent {
+    background-color: #fff;
+    width: 100%;
+}
+#EComContent table.PartsListTopBottom td {
+    text-align: center;
+    height: 25px;
+    padding-top: 5px;
+}
+
+#PartsList {
+    background-color: #f3f2ee;
+    width: 100%;
+}
+    #PartsList th,
+    #PartsList td {
+        color: #000;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 6px;
+        vertical-align: top;
+    }
+
+    #PartsList td.price {
+        font-weight: bold;
+        text-align: center;
+    }
+
+        #PartsList td.price a {
+            color: #000;
+        }
+
+            #PartsList td.price a:hover {
+                color: gray;
+            }
+
+    #PartsList th {
+        text-align: center; 
+    }
+
+.whiterow td
+    {background-color: #fff;}
+
+.p65-warning-dialog {
+    color: #000;
+}
+
+    #proposition65Link a,
+    #proposition65Link a:visited,
+    a.p65-warning,
+    .p65-warning-dialog a,
+    .p65-warning-dialog a:visited {
+        color: red;
+    }
+
+    .p65-warning-dialog .modal-content {
+        line-height: 22px;
+    }
+
+        .p65-warning-dialog .modal-content img {
+            vertical-align: bottom;
+        }
+
+.call-price-content {
+    padding-bottom: 20px;
+}
+    .call-price-content:after {
+        display: table;
+        content: " ";
+        clear: both;
+    }
+
+    .call-price-content .price-info {
+        color: red;
+        float: left;
+        width: 200px;
+    }
+
+    .call-price-content .shopping { float: right; }
+
+/* Responsive layout */
+.fiche-filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a[aria-expanded=true] .glyphicon-plus {
+    display: none;
+}
+
+a[aria-expanded=false] .glyphicon-plus {
+    display: inline-block;
+}
+
+a[aria-expanded=true] .glyphicon-minus {
+    display: inline-block;
+}
+
+a[aria-expanded=false] .glyphicon-minus {
+    display: none;
+}
+
+#fiche-header a,
+#fiche-header a:visited,
+#fiche-breadcrumb a,
+#fiche-breadcrumb a:visited,
+#fiche-select-page a,
+#fiche-select-page a:visited,
+#fiche-result a,
+#fiche-result a:visited {
+    cursor: pointer;
+    color: #333;
+}
+
+.fiche-group > a:hover {
+    text-decoration: none;
+}
+
+.fiche-subgroup {
+    margin-left: 17px;
+}
+
+/* Fiche category and Fiche manufacturer */
+div.fiche-title {
+    background-image: linear-gradient(to bottom, #929087 0, #929087 2%, #DFDDD2 2%, #B4B2A7 50%, #929087 52%, #929087 54%, transparent 54%);
+    padding: 5px;
+}
+div.fiche-title > span.title-content {
+    background-color: #F6F6EE;
+    border: 3px double #A5A5A5;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 22px;
+}
+div.fiche-sub-title {
+    background-image: linear-gradient(to bottom, #929087 0, #DFDDD2 10%, #B4B2A7 90%, #929087 100%);
+    border-bottom: 1px solid #929087;
+    border-top: 1px solid #929087;
+    clear: both;
+    padding: 7px 5px;
+}
+div.fiche-sub-title .NV_mod_header_text {
+    color: #000;
+}
+table.filter {
+    background-image: linear-gradient(to bottom, #929087 0, #DFDDD2 10%, #B4B2A7 90%, #929087 100%);
+    border-bottom: 1px solid #929087;
+    border-top: 3px solid #6C655B;
+    font-weight: bold;
+    font-size: 12px;
+    height: 31px;
+    padding: 2px;
+    width: 100%;
+}
+table.filter td {
+    font-size: 11px;
+    padding: 0 5px;
+}
+table.filter .NV_mod_header_text,
+table.filter select,
+table.filter input {
+    color: #000;
+    font-size: 12px;
+}
+.filter-expand {
+    margin: 10px 20px;
+}
+.filter-expand a {
+    color: #666;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.fiche-classification {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 25px;
+    width: 600px;
+}
+.fiche-classification .item {
+    float: left;
+    width: 33%;
+}
+#EComContent .breadcrumb > li + li:before {
+    color: inherit;
+    content: ">";
+}
+/* Available popup */
+.availabilityPopup {
+    display: none;
+    width: 337px;
+    height: 138px;
+    position: absolute;
+    vertical-align: middle;
+}
+.availabilityPopupLink {
+    position: relative;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.my-text {
+    color: #34332F;
+    font-family: arial;
+    font-size: 8pt;
+    font-weight: bold;
+    margin: 4px;
+    text-decoration: none;
+}
+
+h1.fiche-title,
+h2.fiche-title {
+   color: #000;
+}
