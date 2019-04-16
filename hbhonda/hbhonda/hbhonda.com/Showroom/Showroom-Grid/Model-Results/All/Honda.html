@@ -257,191 +257,161 @@ Huntington Beach, CA 92647</address>
     </button>
 </div>
 
-<div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-            <ul  id=dnn_ctl07 class="nav navbar-nav ">
-            <li >
+<style>
+    #main_nav ul {
+        background:black;
+        float: left;
+        -webkit-transition: .5s;
+        transition: .5s;
+        padding: 0px;
+        margin-left: 20px;
+        margin-right: 0px;
+        font-size: 20px;
+    }
+        
+    #main_nav li {
+        float: left;
+        position: relative;
+        width: 220px;
+        list-style: none;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
 
-                    <a href="../../../../index.html">Home</a>
+    #main_nav a {
+        display: block;
+        text-decoration: none;
+        /*padding: 5px 15px;*/
+        color:white;
+    }
+    #main_nav ul ul {
+        position: absolute;
+        left: 0;
+        /*top: 100%;*/
+        visibility: hidden;
+        /*opacity: 0;*/
+    }
+
+    #main_nav ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    #main_nav li:hover, #main_nav li:hover li {
+        background: black;
+    }
+
+    #main_nav li li:hover, #main_nav li li:hover li {
+        background: red;
+    }
+
+    #main_nav li li li:hover {
+        background: #999;
+    }
+
+    #main_nav li:hover > ul {
+        visibility: visible;
+        opacity: 1;
+    }
+
+</style>
+
+<nav id="main_nav">
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
             </li>
-            <li  class="dropdown">
-
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Showroom <b class="caret"></b></a>
-        <ul  class="dropdown-menu">
-            <li >
-
-                    <a href="Honda.html">New Honda Models</a>
+            <li>
+                <a href="Honda.html">MOTORCYCLES</a>
+                <ul>
+                    <li>
+                        <a href="Honda.html">Honda Models</a>
+                        <ul>
+                            <li><a href="Showroom/new-used-motorcycles-for-sale-huntington-beach-california.html">New Honda Inventory</a></li>
+                            <li><a href="">Used Honda Inventory</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Full Inventory</a>
+                        <ul>
+                            <li><a href="">Full used Inventory </a></li>
+                            <li><a href="">ATV</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">OEM Promotions</a>
+                    </li>
+                    <li>
+                        <a href="">Schedule a test ride</a>
+                    </li>
+                </ul>
             </li>
-            <li >
-
-                    <a href="../../../new-honda-atv-utv-scooter-motorcycle-inventory-huntington-beach-ca.html">New Honda Inventory</a>
+            <li>
+                <a href="../../../hbhonda/hbhonda/hbhonda.com/Services/atv-motorcycle-utv-service-huntington-beach-ca.html">SERVICES</a>
+                <ul>
+                    <li><a href="">Service Department</a>
+                        <ul>
+                            <li><a href="">Service Request Form</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Parts Department</a>
+                        <ul>
+                            <li><a href="">Parts Request Form</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Financing</a></li>
+                    <li><a href="">Value your trade</a></li>
+                </ul>
             </li>
-            <li >
-
-                    <a href="../../../used-honda-atv-motorcycle-scooter-utv-inventory-huntington-beach-ca.html">Used Inventory</a>
+            <li>
+                <a href="../../../Catalog/HBHondaCatalog/shop.hbhonda.com/catalog.html">SHOPPING</a>
+                <ul>
+                    <li><a href="../../../Catalog/HBHondaCatalog/shop.hbhonda.com/fiche_select.html">OEM Parts Finder</a></li>
+                    <li><a href="../../../Catalog/HBHondaCatalog/shop.hbhonda.com/catalog.html">Shop All Departments</a></li>
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Shopping Cart</a></li>
+                </ul>
             </li>
-            <li >
-
-                    <a href="../../../new-used-motorcycles-for-sale-huntington-beach-california.html">Full Inventory</a>
+            <li>
+                <a href="">CUSTOMER CORNER</a>
+                <ul>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Links</a></li>
+                    <li><a href="">Police Products</a></li>
+                    <li><a href="">Testimonials</a></li>
+                    <li><a href="">Submit A Testimonial</a></li>
+                    <li><a href="">Newsletter</a></li>
+                    <li><a href="">Photos</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Dealer Info</a>
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Directions</a></li>
+                            <li><a href="">Employment</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
-            <li >
-
-                    <a href="../../../new-used-atv-four-wheeler-quads-for-sale-huntington-beach-ca.html">ATV Inventory</a>
-            </li>
-            <li >
-
-                    <a href="../../../new-used-side-by-side-utility-vehicles-for-sale-huntington-beach-california.html">Side by Side Inventory</a>
-            </li>
-            <li >
-
-                    <a href="http://hbhondagenerators.com/" target="_blank">Generators</a>
-            </li>
-            <li >
-
-                    <a href="../../../honda-promotions-available-huntington-beach.html">OEM Promotions</a>
-            </li>
-            <li >
-
-                    <a href="../../../Schedule-A-Test-Ride.html">Schedule A Test Ride</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Contact-Us.html">Contact Us</a>
-            </li>
-
         </ul>
-            </li>
-            <li  class="dropdown">
-
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Services <b class="caret"></b></a>
-        <ul  class="dropdown-menu">
-            <li >
-
-                    <a href="../../../../Services/atv-motorcycle-utv-service-huntington-beach-ca.html">Service Department</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Services/atv-motorcycle-utv-service-request-form-huntington-beach-ca.html">Service Request Form</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Services/honda-parts-and-accessories-huntington-beach-california.html">Parts Department</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Services/honda-parts-and-accessories-request-form-huntington-beach-california.html">Parts Request Form</a>
-            </li>
-            <li  class="dropdown">
-
-                    <a href="../../../../Services/Financing.html">Financing</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Services/Value-Your-Trade.html">Value Your Trade</a>
-            </li>
-
-        </ul>
-            </li>
-            <li  class="dropdown">
-
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">SHOPPING <b class="caret"></b></a>
-        <ul  class="dropdown-menu">
-            <li >
-
-                    <a href="https://shop.hbhonda.com/fiche_select.asp">OEM Parts Finder</a>
-            </li>
-            <li >
-
-                    <a href="https://shop.hbhonda.com/catalog.asp">ONLINE CATALOGS</a>
-            </li>
-            <li >
-
-                    <a href="https://shop.hbhonda.com/fiche_select.asp">PARTS</a>
-            </li>
-            <li >
-
-                    <a href="https://shop.hbhonda.com/account_info.asp">MY ACCOUNT</a>
-            </li>
-            <li >
-
-                    <a href="https://shop.hbhonda.com/wishlists.asp">WISH LIST</a>
-            </li>
-            <li >
-
-                    <a href="https://shop.hbhonda.com/ecbasket.asp">SHOPPING CART</a>
-            </li>
-
-        </ul>
-            </li>
-            <li  class="dropdown">
-
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dealer Info <b class="caret"></b></a>
-        <ul  class="dropdown-menu">
-            <li >
-
-                    <a href="../../../../Dealer-Info/about-huntington-beach-honda-california-dealer.html">About Us</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Dealer-Info/Directions.html">Directions</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Dealer-Info/Employment.html">Employment</a>
-            </li>
-
-        </ul>
-            </li>
-            <li  class="dropdown">
-
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Customer Corner <b class="caret"></b></a>
-        <ul  class="dropdown-menu">
-            <li >
-
-                    <a href="../../../../Customer-Corner/Events.html">Events</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Links.html">Links</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Police-Products.html">Police Products</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Read-Testimonials.html">Read Testimonials</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Submit-A-Testimonial.html">Submit A Testimonial</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Newsletter.html">Newsletter</a>
-            </li>
-            <li >
-
-                    <a href="https://www.facebook.com/hbhonda/photos_stream?tab=photos_albums" target="_blank">Photos</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Contact-Us.html">Contact Us</a>
-            </li>
-            <li >
-
-                    <a href="../../../../Customer-Corner/Reviews.html">Reviews</a>
-            </li>
-
-        </ul>
-            </li>
-
-        </ul>
-
-</div>
+    </nav>
 
 
             </div>
         </section>
+        <li>
+            <script>
+                (function() {
+                var cx = '009209585796929517729:bbi9uquoqjw';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+                })();
+            </script>
+            <gcse:search></gcse:search>                      
+        </li>
     </div>
 </header>
 
