@@ -257,144 +257,131 @@ Huntington Beach, CA 92647</address>
     </button>
 </div>
 <style>
-/*		h1, #main_content, #dog_link {
-			padding: 15px;
-        }
-        */
-
-		#main_nav ul {
-			background:black;
-			float: left;
-			-webkit-transition: .5s;
-			transition: .5s;
-        }
-        	
-		#main_nav li {
-			float: left;
-			position: relative;
-			width: 200px;
-			list-style: none;
-			-webkit-transition: .5s;
-			transition: .5s;
-		}
-	
-		#main_nav > ul > li > a, h1 {
-			text-transform: uppercase;
-		}
-	
-		#main_nav a {
-			display: block;
-			text-decoration: none;
-			/*padding: 5px 15px;*/
-			color:white;
-		}
-		#main_nav ul ul {
-			position: absolute;
-			left: 0;
-			/*top: 100%;*/
-			visibility: hidden;
-			/*opacity: 0;*/
-		}
-	
-		#main_nav ul ul ul {
-			left: 100%;
-			top: 0;
-		}
-	
-		#main_nav li:hover, #main_nav li:hover li {
-			background: black;
-		}
-	
-		#main_nav li li:hover, #main_nav li li:hover li {
-			background: red;
-		}
-	
-		#main_nav li li li:hover {
-			background: #999;
-		}
-	
-		#main_nav li:hover > ul {
-			visibility: visible;
-			opacity: 1;
-		}
-        /* #main_nav #search li{
-            width: 600px;
-            color: black;
-        } */
+.nav ul {
+     list-style: none;
+     background-color: #444;
+     text-align: center;
+     padding: 0;
+     margin: 0;
+}
+ .nav li {
+     font-family: 'Oswald', sans-serif;
+     font-size: 1.2em;
+     line-height: 40px;
+     text-align: left;
+     position: relative; /* added for it's absolute child */
+}
+ .nav a {
+     text-decoration: none;
+     color: #fff;
+     display: block;
+     padding-left: 15px;
+     border-bottom: 1px solid #888;
+     transition: .3s background-color;
+}
+ .nav a:hover {
+     background-color: #005f5f;
+}
+ .nav a.active {
+     background-color: #aaa;
+     color: #444;
+     cursor: default;
+}
+/* Sub Menus */
+ .nav li li {
+     font-size: .8em;
+}
+/******************************************* Style menu for larger screens Using 650px (130px each * 5 items), but ems or other values could be used depending on other factors ********************************************/
+ @media screen and (min-width: 650px) {
+     .nav li {
+         width: 130px;
+         border-bottom: none;
+         height: 50px;
+         line-height: 50px;
+         font-size: 1.4em;
+         display: inline-block;
+         margin-right: -4px;
+    }
+     .nav a {
+         border-bottom: none;
+    }
+     .nav > ul > li {
+         text-align: center;
+    }
+     .nav > ul > li > a {
+         padding-left: 0;
+    }
+    /* Sub Menus */
+     .nav li ul {
+         position: absolute;
+         display: none;
+         width: inherit;
+    }
+     .nav > ul > li:hover > ul {
+         display: block;
+    }
+     .nav li > ul > li:hover ul { /* change hover to nested li */
+         display: block; 
+    }
+     .nav li > ul > li ul { /* change position to it's nested parent */
+         top: 0;
+         right: -100%;
+    }
+     .nav li ul li {
+         display: block;
+    }
+}
 </style>
-	<nav id="main_nav">
-			<ul>
-				<li>
-					<a href="">Birds</a>
-					<ul>
-						<li><a href="">Ratites</a></li>
-						<li><a href="">Fowl</a></li>
-						<li><a href="">Neoaves</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="">Mammals</a>
-					<ul>
-						<li>
-							<a href="">Monotremes</a>
-							<ul>
-								<li><a href="">Echidnas</a></li>
-								<li><a href="">Platypus</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Marsupials</a>
-							<ul>
-								<li><a href="">Opossums</a></li>
-								<li><a href="">Numbats, etc.</a></li>
-								<li><a href="">Bandicoots, etc.</a></li>
-								<li><a href="">Kangaroos, koalas, wombats, etc.</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Placentals</a>
-							<ul>
-								<li><a href="">Primates, ungulates, etc.</a></li>
-								<li><a href="">Anteaters, sloths, etc.</a></li>
-								<li><a href="">Elephants, etc.</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="">Reptiles</a>
-					<ul>
-						<li><a href="">Lizards and snakes</a></li>
-						<li><a href="">Tortoises and turtles</a></li>
-						<li><a href="">Crocodilians</a></li>
-						<li><a href="">Tuatara</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="">Amphibians</a>
-					<ul>
-						<li><a href="">Frogs and toads</a></li>
-						<li><a href="">Salamanders and newts</a></li>
-						<li><a href="">Caecilians</a></li>
-					</ul>
-                </li>
-                <li id="search">
-                    <script>
-  (function() {
-    var cx = '009209585796929517729:bbi9uquoqjw';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>                  
+
+<div class="nav">
+    <ul>
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/">Menu 1</a></li>
+        <li><a href="/en/menu2/">Menu 2</a>
+            <ul class="/en/menu5/menu5-1/">
+                <li><a href="">Menu 2.1</a></li>
+                <li><a href="">Menu 2.2</a>
+                    <ul class="/en/menu5/menu5-1/">
+                        <li><a href="">Menu 2.2.1</a></li>
+                        <li><a href="">Menu 2.2.2</a></li>
+                    </ul>
                 </li>
             </ul>
-		</nav>
-
+        </li>
+        <li><a href="/en/menu3/">Menu 3</a></li>
+        <li><a href="/en/menu4/">Menu 4</a></li>
+        <li><a href="/en/menu5">Menu 5</a>
+            <ul class="/en/menu5/menu5-1/">
+                <li><a href="">Menu 5.1</a>
+                    <ul class="/en/menu5/menu5-1/">
+                        <li><a href="">Menu 5.1.1</a></li>
+                        <li><a href="">Menu 5.1.2</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Menu 5.2</a>
+                    <ul class="/en/menu5/menu5-1/">
+                        <li><a href="">Menu 5.2.1</a></li>
+                        <li><a href="">Menu 5.2.2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div>
+                <script>
+                    (function() {
+                        var cx = '009209585796929517729:bbi9uquoqjw';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+            <gcse:search></gcse:search></a>                      
+        </li>
+    </ul>
 
             </div>
         </section>
